@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dimensionamento de Cabos</title>
+    <script src="script3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style3.css" />
+</head>
+<body>
+	<h1>Dimensionamento de Cabos</h1>
+	<div class="container">
+		<form class="form-left">
+			<label for="corrente-nominal">Corrente Nominal a ser suportada (A):</label>
+			<input type="number" id="corrente-nominal" name="corrente-nominal" value="0"><br>
+
+			<label for="fator-seguranca">Margem de Segurança da Corrente (%):</label>
+			<input type="number" id="fator-seguranca" name="fator-seguranca" value="0"><br>			
+
+            <label for="forma-isolacao">Forma de Isolação:</label>
+            <select id="forma-isolacao" name="forma-isolacao">
+				<option value="1">XLPE/EPR</option>
+				<option value="2">PVC</option>
+			</select><br>
+
+			<label for="num-condutores">Número de Condutores Carregados:</label>
+			<select id="num-condutores" name="num-condutores">
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select><br>
+
+        <form class="form-center">
+			<label for="num-circuitos">Número de Circuitos Agrupados:</label>
+			<select id="num-circuitos" name="num-circuitos">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9 a 11">9 a 11</option>
+				<option value="12 a 15">12 a 15</option>
+				<option value="16 a 19">16 a 19</option>
+				<option value="maior que 20">maior que 20</option>
+			</select><br>
+
+            <label for="temperatura-ambiente">Temperatura ambiente (30º para fator = 1):</label>
+			<select id="temperatura-ambiente" name="temperatura-ambiente">
+				<option value="10">10º</option>
+				<option value="15">15º</option>
+				<option value="20">20º</option>
+				<option value="25">25º</option>
+				<option value="30" selected>30º</option>
+				<option value="35">35º</option>
+				<option value="40">40º</option>
+				<option value="45">45º</option>
+				<option value="50">50º</option>
+				<option value="55">55º</option>
+				<option value="60">60º</option>
+                <option value="65">65º</option>
+                <option value="70">70º</option>
+                <option value="75">75º</option>
+                <option value="80">80º</option>
+            </select><br>
+        
+            <label for="metodo-instalacao">Método de Instalação:</label>
+            <select id="metodo-instalacao" name="metodo-instalacao">
+                <option value="1">Método A1</option>
+                <option value="2">Método A2</option>
+                <option value="3" selected>Método B1</option>
+                <option value="4">Método B2</option>
+                <option value="5">Método C</option>
+                <option value="6">Método D</option>
+            </select><br>
+        </form>
+
+		</form>
+
+		<form class="form-right">
+        
+            <input type="button" value="Calcular" onclick="calcular()"><br>
+        
+            <label for="bitola-cabo">Bitola do Cabo (mm²):</label>
+            <input type="number" id="bitola-cabo" name="bitola-cabo" readonly>
+
+            <label for="fator-temperatura">Fator de Temperatura:</label>
+            <input type="number" id="fator-temperatura" name="fator-temperatura" readonly><br>
+
+            <label for="fator-agrupamento">Fator de agrupamento:</label>
+			<input type="number" id="fator-agrupamento" name="fator-agrupamento" readonly><br>
+
+            <!-- <label for="fator-segurança-view">Fator de margem de segurança da corrente:</label>
+			<input type="text" id="fator-segurança-view" name="fator-segurança-view" readonly><br> -->
+
+			<label for="corrente-com-margem">Corrente a ser suportada com margem de segurança (A):</label>
+			<input type="number" id="corrente-com-margem" name="corrente-com-margem" readonly><br>
+
+			<label for="corrente-maxima-admitida">Corrente máxima admitida do cabo especificado (A):</label>
+			<input type="number" id="corrente-maxima-admitida" name="corrente-maxima-admitida" readonly><br>
+
+        </form>
+    </body>
+    </html>
+    

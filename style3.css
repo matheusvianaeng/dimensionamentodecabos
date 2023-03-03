@@ -1,0 +1,114 @@
+/* Definição de cores */
+:root {
+    --cor-primaria: #000b14;
+    --cor-secundaria: #0E72C6;
+    --cor-terciaria: #F2F2F2;
+    --cor-botao: #4CAF50;
+    --cor-botao-hover: #3E8E41;
+
+    }
+    
+    /* Estilização global da página */
+body {
+    background-color: var(--cor-terciaria);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilização da div que envolve todo o conteúdo */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilização do formulário */
+  form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  /* Estilização dos blocos */
+  .block {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Estilização das labels */
+  label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+  }
+  
+  /* Estilização dos inputs */
+  input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--cor-terciaria);
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--cor-terciaria);
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  
+  /* Estilização do botão */
+  input[type="button"] {
+    background-color: var(--cor-botao);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: var(--cor-botao-hover);
+  }
+  
+  /* Estilização da mensagem de erro */
+  #mensagem-erro {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Estilização do resultado */
+  #resultado {
+    color: var(--cor-primaria);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
