@@ -4,11 +4,13 @@
 	<title>Dimensionamento de Cabos</title>
     <script src="script3.js"></script>
     <link rel="stylesheet" type="text/css" href="style3.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 </head>
 <body>
 	<h1>Dimensionamento de Cabos</h1>
 	<div class="container">
 		<form class="form-left">
+
 			<label for="corrente-nominal">Corrente Nominal a ser suportada (A):</label>
 			<input type="number" id="corrente-nominal" name="corrente-nominal" value="0"><br>
 
@@ -98,7 +100,11 @@
 			<label for="corrente-maxima-admitida">Corrente máxima admitida do cabo especificado (A):</label>
 			<input type="number" id="corrente-maxima-admitida" name="corrente-maxima-admitida" readonly><br>
 
+			<label for="nome-do-cliente">Nome do cliente:</label>
+			<input type="text" id="nome-do-cliente" name="nome-do-cliente" required><br>
+
+			<input type="button" value="Gerar Relatório" id="gerar-relatorio" onclick="gerarRelatorio()"><br>
+
         </form>
     </body>
     </html>
-    
